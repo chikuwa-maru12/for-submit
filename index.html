@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--
+http://localhost:3000/
+https://sftptogo.com/blog/jp/node-js-jp/
+https://qiita.com/dokokano_panda/items/98da31978bc6df76625e
+https://qiita.com/zaburo/items/46736a6d1f8c93eecca2
+https://qiita.com/ist-m-k/items/231273fd6c58a96e6d12
+PS C:\Users\sudesu\Desktop\preLMS> node app.js
+webアプリ 埋め込み js
+-->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <title>web file</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Web file manager</h2>
+        <form method="post" id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="files" id="fileInput" multiple>
+            <button type="submit">送信</button>
+        </form>
+
+        <!--<button onclick="createFolder()">新規フォルダ</button>-->
+    </div>
+
+    <div id="path">/</div>
+
+    <table id="fileList">
+        <thead>
+            <tr>
+                <th>名前</th>
+                <th>種類</th>
+                <th>サイズ</th>
+                <th>更新日</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
