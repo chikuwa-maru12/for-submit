@@ -420,7 +420,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
 
 
     eventSources: [{
-        googleCalendarApiKey: 'AIzaSyASgUrK5Rl21g4U9wv-OnMHQ3B-YiyHqoo',
+        googleCalendarApiKey:apikeyを記述,
         googleCalendarId: 'japanese__ja@holiday.calendar.google.com',
         display: 'background',
         events: ajax({
