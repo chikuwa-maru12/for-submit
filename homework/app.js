@@ -43,7 +43,7 @@ const storage = multer.diskStorage({
     },
 
     filename: (req, file, cb) => {
-        //ここで日本語のファイル名を正しくデコード？
+        //ここで日本語のファイル名を正しくデコード
         let originalname = file.originalname;
         try {
             originalname = Buffer.from(file.originalname, 'latin1').toString('utf8');
