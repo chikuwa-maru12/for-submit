@@ -12,75 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <script>
-        function prelist() {
-            var list, ls, i;
-            //ここはpyでまとめたlistになる
-            list = [
-                ["てすと", "7", "12", "ファイル整理", "未"],
-                ["菅野", "7", "12", "スクリプト制作", "未"]
-            ];
-
-
-            //送信後のコントロールは、pythonのFlaskモジュール
-
-            //あまりにも見た目が悪い
-            //送信後　未->完　に書き換え
-            //未、完 色が分かれてた方がいいかな
-            //サイズも表示されるようにしよう
-            //年書いて、現在より１年経過してたら表示しないようにとか、あり
-            //送信時間書く？
-            //ファイルが選択されていなければ送信されないように
-            ls = "";
-            for (i = 0; i < list.length; i++) {
-                ls = ls + list[i][0] + "　課題:" + list[i][3] +
-                    "　期限" + list[i][1] + "月" + list[i][2] + "日 " +
-                    '<form id="the-form" method="POST">' +
-                    '<input type="file" id="file" name="file" multiple />' +
-                    '<input type="submit" class="btn btn-primary  ml-2" id="submit" value="upload">' +
-                    '<button class="btn btn-primary ml-2">Download</button>' +
-                    '<button class="btn btn-primary ml-2">' + list[i][4] + '</button>' +
-                    '</form> <br>';
-            }
-
-            document.getElementById("homeworklist").innerHTML = ls;
-        }
-
-        function prelist1() {
-            var list, ls, i;
-            //ここはpyでまとめたlistになる
-            list = [
-                ["てすと", "7", "12", "ファイル整理", "hoge.csv", "未"],
-                ["菅野", "7", "12", "スクリプト制作", "hoge.js", "未"],
-                ["ちくわ", "7", "12", "研究Note記載", "研究Note記載", "未"]
-            ];
-
-
-            //送信後のコントロールは、pythonのFlaskモジュール
-
-            //あまりにも見た目が悪い
-            //送信後　未->完　に書き換え
-            //未、完 色が分かれてた方がいいかな
-            //サイズも表示されるようにしよう
-            //年書いて、現在より１年経過してたら表示しないようにとか、あり
-            //送信時間書く？
-            //ファイルが選択されていなければ送信されないように
-            ls = "";
-            for (i = 0; i < list.length; i++) {
-                ls = ls + "課題内容:" + list[i][3] +
-                    "　　提出期限:" + list[i][1] + "月" + list[i][2] + "日 " +
-                    '<br>' + "ファイル名:" + list[i][4] +
-                    '<br>' + "<font color='red'>from </font>" + 'Server:' +
-                    '<button class="btn btn-primary ml-2">Download</button>' +
-                    '<br>' + '<button  class="btn btn-primary ml-2">' + list[i][5] + '</button>' + '<br>' +
-                    "<font color='blue'>to  </font>" + 'Server:' +
-                    '<form id="the-form" method="POST">' +
-                    '<input type="file" id="file" name="file" multiple />' +
-                    '<input type="submit" class="btn btn-primary  ml-2" id="submit" value="upload">' +
-                    '</form> <br>';
-            }
-
-            document.getElementById("homeworklist1").innerHTML = ls;
-        }
+     
 
         function prelist2() {
             var list, ls, i;
@@ -91,10 +23,7 @@
                 ["ちくわ", "7", "12", "研究Note記載", "研究Note記載", "未"]
             ];
 
-
-            //送信後のコントロールは、pythonのFlaskモジュール
-
-            //あまりにも見た目が悪い
+          
             //送信後　未->完　に書き換え
             //未、完 色が分かれてた方がいいかな
             //サイズも表示されるようにしよう
@@ -206,35 +135,6 @@
                 </div>
             </div>
         </section>
-
-        <!--
-        <section class="content">
-            <button onclick="prelist()" class="btn btn-primary" style="width:70px;">prelist</button>
-            <div class="card">
-                <div class="card-header">
-                    <h4>課題画面0</h4>
-                </div>
-                <div class="card-body " style="height: 150px;">
-                    <div class="overflow-auto" style="height:100px;">
-                        <div id="homeworklist"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="content">
-            <button onclick="prelist1()" class="btn btn-primary" style="width:70px;">prelist</button>
-            <div class="card">
-                <div class="card-header">
-                    <h4>課題画面1</h4>
-                </div>
-                <div class="card-body " style="height: 150px;">
-                    <div class="overflow-auto" style="height:100px;">
-                        <div id="homeworklist1"></div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
 
 
         <section class="content">
