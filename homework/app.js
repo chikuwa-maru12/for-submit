@@ -54,7 +54,7 @@ const storage = multer.diskStorage({
         const ext = path.extname(originalname);
         const name = path.basename(originalname, ext);
 
-        //安全なファイル名？　重複防止？
+        //重複防止
         //投稿ファイルの時間毎に名前に秒数数字を追加している
         //ここは上書きか選べるようにしよう
         const today = new Date();
